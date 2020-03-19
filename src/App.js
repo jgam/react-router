@@ -3,7 +3,9 @@ import './App.css';
 import { Route, Link } from 'react-router-dom';
 import About from './components/About';
 import Home from './components/Home';
-import Profile from './components/Profile';
+import Profiles from './components/Profiles';
+import HistorySample from './components/HistorySample';
+import WithRouterSample from './components/WithRouterSample';
 
 function App() {
   return (
@@ -21,11 +23,16 @@ function App() {
         <li>
           <Link to="/profile/jgam">jgam profile</Link>
         </li>
+        <li>
+          <Link to="/history">History</Link>
+        </li>
       </ul>
       <hr />
       <Route path="/" component={Home} exact={true}/>
       <Route path="/about" component={About} />
-      <Route path="/profile" component={Profile}/>
+      <Route path="/profiles" component={Profiles}/>
+      <Route path="/history" component={HistorySample} />
+      <WithRouterSample />
     </div>
   );
 }
